@@ -2,8 +2,9 @@
 from rest_framework import generics, permissions, views
 from .models import Video
 from .serializers import VideoSerializer
-# from django.http import StreamingHttpResponse
-# import cv2
+from rest_framework.views import APIView
+from django.http import HttpResponse
+from rest_framework.response import Response
 
 class VideoListCreateAPIView(generics.ListCreateAPIView):
     queryset = Video.objects.all()
@@ -25,6 +26,11 @@ class VideoRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = VideoSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+class Home(APIView):
+    def get(self, request):
+        
+        return Response({"message": "Hello! Welcome to the API."})
+    
 # class VideoStreamAPIView(views.APIView):
 #     permission_classes = [permissions.IsAuthenticated]
     
