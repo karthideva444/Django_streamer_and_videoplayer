@@ -1,0 +1,122 @@
+
+//for windows users only
+
+## Installation
+
+1. Clone the repository:
+
+    ```cmd
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+2. Install the dependencies:
+
+    ```cmd
+    pip install -r requirements.txt
+    ```
+
+3. Apply database migrations:
+
+    ```cmd
+    python manage.py migrate
+    ```
+
+4. Start the development server:
+
+    ```cmd
+    python manage.py runserver
+    ```
+
+//----------------------------------------------------------------
+//for linux users only
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+2. Install the dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Apply database migrations:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+4. Start the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+//----------------------------------------------------------------
+// for macOS user only
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+2. Install the dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Apply database migrations:
+
+    ```bash
+    python manage.py migrate
+    ```
+4. Start the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
+
+## usage for all users
+
+1.Open Postman.
+
+2.Import the provided Postman collection (JSON file) from the root directory of the project Django_streamer_and_oee.postman_collection.
+
+3.Navigate to the "Register User" endpoint.By using post Request. 
+   POST : http://localhost:8000/api/v1/register/
+
+
+4.Set the request body with the required user information with raw body.
+
+   {
+        "username":"admin",
+        "password":"admin@123"
+   }
+
+5.Send the POST request to register the user.
+
+6.Extract the generated token from the response.
+{
+    token : "abc12345"
+}
+
+7.Set the token as the value of the "Authorization" header for subsequent requests.
+
+    (i)   open any request
+    (ii)  click "headers" button
+    (iii) set key = "Authorization" and value = Token abc12345
+                                (or)
+            set the token a variable in the collection header and set the value = {{token}}
+
+
+
+
+
