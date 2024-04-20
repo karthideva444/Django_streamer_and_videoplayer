@@ -28,7 +28,6 @@ class VideoRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 class Home(APIView):
     def get(self, request):
-        
         return Response({"message": "Hello! Welcome to the API."})
     
 # class VideoStreamAPIView(views.APIView):
